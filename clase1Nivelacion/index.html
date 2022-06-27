@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="./main.js" ></script>
+    <title>Empezando con React JS </title>
+</head>
+<body>
+    <div>
+        <h1>Clase 1 nivelacion</h1>
+        <input type="text">
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+        </ul>
+        <button onclick="mifuncion" type="submit" id="button">Click</button>   <!-- Boton para ejecutar el codigo --> 
+
+    </div>
+    <script> 
+        // Codigo para ejecutar el codigo
+        const nombre = "moises"
+        const obj = {
+            nombre: "david",
+            apellido: "perez", // Coma para separar los atributos
+            edad: "21" 
+        } //no significa que el nombre sea el mismo que el objeto 
+        obj.nombre = "juan" // Cambiar el nombre del objeto  
+        
+        const mifuncion = () => {
+            document.getElementById('button').addEventListener('click', () => {
+                console.log('Hola mundo');
+            });
+           
+        }
+
+        //ternario if 
+        const edad = obj.edad > 18 ? "Mayor de edad" : "Menor de edad"
+        let condition = true;
+        let result = "";
+        if (condition) {
+            result = "true";
+        } else {
+            result = "false";
+        }
+        console.log('el resultado es: '+ result);
+        console.log(`el resultado es: ${result}`);
+
+        //ternario
+        let condition2 = false;
+        let result2 = condition2 ? "true" : "false"; //usamos ? para el ternario y : para el else, en caso de que se cumpla o no la condicion
+        console.log(`el resultado es: ${result2}`); // el resultado es: false porque la condicion es falsa
+
+        //extrayendo atributos de un objeto
+        const objeto = {
+            nombre: "juan",
+            apellido: "perez",
+            edad: "21"
+        }
+        const nombre2=objeto.nombre;
+        const apellido2=objeto.apellido;
+
+        //extrayendo atributos de un objeto con destructuring
+        const {nombre3 = nombre} = objeto; // destructuramos el objeto y lo guardamos en variables, const nombre = objeto.nombre;
+              //variable = atributo del objeto = nombre_objeto 
+        const {apellido3 = apellido} = objeto; 
+        console.log(`el nombre es: ${nombre3} y el apellido es: ${apellido3}`); // el nombre es: juan y el apellido es: perez
+
+    </script>
+    
+</body>
+</html>
