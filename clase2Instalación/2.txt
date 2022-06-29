@@ -2,3 +2,4 @@ Se revisa:
 Conceptos de clase anterior
 Instalación de node.
 Mapa de flujo de datos en React
+Creamos el proyecto moises-castro y vimos como se inicia un proyecto con React 
