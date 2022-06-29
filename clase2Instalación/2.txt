@@ -1,0 +1,4 @@
+Se revisa:
+Conceptos de clase anterior
+Instalación de node.
+Mapa de flujo de datos en React
