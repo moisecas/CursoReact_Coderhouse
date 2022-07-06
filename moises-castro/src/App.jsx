@@ -1,5 +1,11 @@
 
 import './App.css';
+//importar clase.jsx
+import Clase from './Components/Clases';
+import Formulario from './Components/Formulario';
+import Container from './Components/Container';
+
+
 
 function App() {
   return (
@@ -11,6 +17,23 @@ function App() {
       <div>
         Moiso
       </div>
+      <Container />
+      <Clase />
+      <Formulario />  {/*importar Formulario.jsx*/} 
+      <h1> Reutilizar componentes </h1>
+      <Clase />
+      <Formulario saludar="hola"/>  {/*importar Formulario.jsx*/} 
+      
+      <h1> Reutilizar componentes </h1>
+      <Clase />
+      <Formulario />  {/*importar Formulario.jsx*/} 
+      <h1> Reutilizar componentes </h1>
+      <Clase />
+      <Formulario />  {/*importar Formulario.jsx*/} 
+      <h1> Reutilizar componentes </h1>
+      {/*prop saludar*/}
+      <Formulario  />  {/*importar Formulario.jsx*/}
+      
 
     </div>
   );
