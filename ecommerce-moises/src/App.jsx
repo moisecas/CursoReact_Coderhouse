@@ -1,26 +1,17 @@
 
-import './App.css';
-import Nabvar from './Components/Nabvar';
+import "bootstrap/dist/css/bootstrap.min.css";
+import Navbar from './Components/Navbar';
+import {BrowserRouter as Router} from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      <Nabvar />
-    </div>
+    
+      <Router>
+        <Navbar />
+      </Router>
+
+      
+    
   );
 }
 
