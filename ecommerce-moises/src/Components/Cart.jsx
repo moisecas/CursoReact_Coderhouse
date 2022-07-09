@@ -4,8 +4,8 @@ import React from 'react'
 const Cart = () => {
   
   return (
-    <a className='carrito'  href="">
-        <img className='iconoCart' src="../../assets/cart.svg" alt="" />
+    <a className='cart'  href="">
+        <img className='Cart' src="../../assets/cart.svg" alt="" />
         <p>1</p>
     </a>           
         
