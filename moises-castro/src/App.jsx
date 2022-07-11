@@ -4,6 +4,7 @@ import './App.css';
 import Clase from './Components/Clases';
 import Formulario from './Components/Formulario';
 import Container from './Components/Container';
+import Props from './Components/Props';
 
 
 
@@ -33,6 +34,8 @@ function App() {
       <h1> Reutilizar componentes </h1>
       {/*prop saludar*/}
       <Formulario  />  {/*importar Formulario.jsx*/}
+      <h1> Reutilizar componentes </h1>
+      <Props />
       
 
     </div>
