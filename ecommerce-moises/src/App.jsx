@@ -1,7 +1,7 @@
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from './Components/Navbar';
-import Cart from './Components/Cart';
+import Cartwidget from './Components/CartWidget/Cartwidget'
 import {BrowserRouter as Router} from 'react-router-dom';
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
     
       <Router>
         <Navbar />
-        <Cart />
+        <Cartwidget />
       </Router>
 
       

@@ -1,15 +1,18 @@
 import React from 'react'
+
+
  
 
-const Cart = () => {
+const Cartwidget = () => {
   
   return (
     <a className='cart'  href="">
-        <img className='Cart' src="../../assets/cart.svg" alt="" />
+      <img className='carrito' src="./assets/images/cart.svg" alt="" />
         <p>1</p>
     </a>           
         
   )
 }
 
-export default Cart
+export default Cartwidget
+
