@@ -1,28 +1,17 @@
-import React, { useReducer } from 'react'
-import { shopingReducer,shoppingInitialState } from '../reducers/cartReducer';
 
+import React from 'react'
+import logo from '../images/cart.png';
 
-
-
-
-const Cartwidget = () => {
-  
-  const  [state,dispatch]= useReducer(
-    shopingReducer,shoppingInitialState
-    ); 
-    const {products,cart}=state; 
+const Cartwidget = () => { 
+      
   return (
-    <div className="cart-widget">
-      <h2>Carrito de compras</h2> 
-      <h3>Productos</h3>
-      <article className='box' ></article>
-      <h3>Carrito</h3>
-      <article className='box' ></article>
-        
+    <div className='w-25'>
+      <img src={logo} alt="cart" className='w-25' />
+         
     </div>      
         
   )
 }
 
-export default Cartwidget
+export default Cartwidget ; 
 
