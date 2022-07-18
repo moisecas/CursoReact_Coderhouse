@@ -26,6 +26,13 @@ let products = [
  //parametros de la promesa (resolve, reject)
 
 const ItemListContainer = () => {
+    useEffect(() => {
+        const url = './json/Data.json'
+        fetch(url)
+        .then(response => response.json())
+        .then(respuesta=>console.log(respuesta.products))
+        .catch(error => console.log(error))
+    }, [])
     
      //estado inicial de los productos (products) vacio 
     task 
