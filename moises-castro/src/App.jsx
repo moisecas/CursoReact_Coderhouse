@@ -1,15 +1,19 @@
 
 import './App.css';
+import { useState } from "react"; 
 //importar clase.jsx
 import Clase from './Components/Clases';
 import Formulario from './Components/Formulario';
 import Container from './Components/Container';
 import Props from './Components/Props';
 import ItemListContainer from './Components/ItemListContainer';
+import Personajes from "./Components/Personajes";
 
 
 
 function App() {
+  const [nombre, setNombre] = useState("");
+
   return (
     <div className="App">
       <img src="./src/logo.svg" alt="moises" />
@@ -38,7 +42,8 @@ function App() {
       <Formulario  />  {/*importar Formulario.jsx*/}
       <h1> Reutilizar componentes </h1>
       <Props />
-      
+      <h1> Api personajes </h1>
+      <Personajes  /> 
       
 
     </div>

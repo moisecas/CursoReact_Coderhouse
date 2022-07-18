@@ -1,0 +1,10 @@
+GET https://api.github.com/repos/jquery/jquery/issues/1234/comments
+Content-Type: application/json
+
+[
+  {
+    "body": "I'm not sure what you mean, but this is not working for me.",
+    "user": {
+      "login": "octocat",
+      "id": 1,
+      "avatar_url": "

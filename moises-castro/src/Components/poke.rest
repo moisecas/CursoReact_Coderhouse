@@ -1,0 +1,2 @@
+GET https://pokeapi.co/docs/v2 
+Content-Type: application/json  
