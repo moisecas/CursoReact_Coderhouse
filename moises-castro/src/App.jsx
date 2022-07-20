@@ -1,4 +1,6 @@
 
+import { BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
+
 import './App.css';
 import { useState } from "react"; 
 //importar clase.jsx
@@ -7,7 +9,9 @@ import Formulario from './Components/Formulario';
 import Container from './Components/Container';
 import Props from './Components/Props';
 import ItemListContainer from './Components/ItemListContainer';
-import Personajes from "./Components/Personajes";
+
+import Cart from "./Components/Cart";
+import Barra from './Components/Barra';
 
 
 
@@ -15,38 +19,31 @@ function App() {
   const [nombre, setNombre] = useState("");
 
   return (
-    <div className="App">
-      <img src="./src/logo.svg" alt="moises" />
-      <input type="text" placeholder="Search" />
-      <input type="text" placeholder="Search" />
-      <hr />
-      <div>
-        Moiso
-      </div>
-      <ItemListContainer /> 
-      <Container />
-      <Clase />
-      <Formulario />  {/*importar Formulario.jsx*/} 
-      <h1> Reutilizar componentes </h1>
-      <Clase />
-      <Formulario saludar="hola"/>  {/*importar Formulario.jsx*/} 
-      
-      <h1> Reutilizar componentes </h1>
-      <Clase />
-      <Formulario />  {/*importar Formulario.jsx*/} 
-      <h1> Reutilizar componentes </h1>
-      <Clase />
-      <Formulario />  {/*importar Formulario.jsx*/} 
-      <h1> Reutilizar componentes </h1>
-      {/*prop saludar*/}
-      <Formulario  />  {/*importar Formulario.jsx*/}
-      <h1> Reutilizar componentes </h1>
-      <Props />
-      <h1> Api personajes </h1>
-      <Personajes  /> 
-      
+    <BrowserRouter> 
+      <div className="App">
+        <img src="./src/logo.svg" alt="moises" />
+        <input type="text" placeholder="Search" />
+        <input type="text" placeholder="Search" />
+        <hr />
+        <div>
+          Moiso
+        </div>
+        <Barra/> 
+        <Routes> 
+        
+          <Route path="/" element={<Clase />} /> {/* element es una funcion que retorna un componente */} 
+          componentes que requieren ruta, por ejemplo navbar no necesita pues es fijo en la pagina
+          <Route path="/formulario" element={<Formulario />} />
+          <Route path="/cart" element={<Cart />} /> {/* componente que requiere ruta */}
+          <Route path="/props" element={<Props />} />
+          <Route path="/itemlist" element={<ItemListContainer />} />
+          
+          <Route path="*" element={<Navigate to="/"/>} />  
 
-    </div>
+        </Routes>
+        
+      </div>
+    </BrowserRouter>
   );
 }
 
