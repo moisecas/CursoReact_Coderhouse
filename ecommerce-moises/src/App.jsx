@@ -11,6 +11,7 @@ import {BrowserRouter as Router} from 'react-router-dom';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CardProduct from './Components/CardProduct';
+import ItemDetail from './Components/ItemDetail';
 
 
 
@@ -27,7 +28,7 @@ function App() {
         /> 
        
         <ItemListContainer saludo={'ShopCoder'} /> 
-        
+        <ItemDetail />
       </Router>
 
       
