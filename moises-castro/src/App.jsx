@@ -12,13 +12,18 @@ import ItemListContainer from './Components/ItemListContainer';
 
 import Cart from "./Components/Cart";
 import Barra from './Components/Barra';
+import Listener from "./Components/Listener";
+import CartContext from "./Components/CartContext";
+import CartProvider from "./Components/CartContext";
 
 
 
 function App() {
   const [nombre, setNombre] = useState("");
+  
 
   return (
+    
     <BrowserRouter> 
       <div className="App">
         <img src="./src/logo.svg" alt="moises" />
@@ -28,6 +33,10 @@ function App() {
         <div>
           Moiso
         </div>
+        
+        
+        
+        <Listener/>
         <Barra/> 
         <Routes> 
         
@@ -43,7 +52,11 @@ function App() {
         </Routes>
         
       </div>
+      <CartProvider>
+        
+      </CartProvider>
     </BrowserRouter>
+    
   );
 }
 
