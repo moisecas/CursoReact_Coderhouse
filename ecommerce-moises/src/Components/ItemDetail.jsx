@@ -2,6 +2,7 @@ import React from 'react'
 
 import Colors from './Colors'
 import Details from './Details';
+import ItemCount from './ItemCount';
 
 class ProductItem extends React.Component {
     
@@ -69,6 +70,7 @@ class ProductItem extends React.Component {
             </div>
           ))
         }
+        <ItemCount/> {/* componente para agregar productos al carrito */} 
       </div>
 
     );

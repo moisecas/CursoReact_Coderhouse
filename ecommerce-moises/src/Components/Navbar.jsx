@@ -12,7 +12,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 
 const Nabvar = () => {
   return (
-
+    
     <Navbar bg="light" expand="lg">
       <Container>
         <Cartwidget  /> 
@@ -37,6 +37,8 @@ const Nabvar = () => {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+
+   
 
   )
 }
