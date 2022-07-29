@@ -14,23 +14,32 @@ import CardProduct from './Components/CardProduct';
 import ItemDetail from './Components/ItemDetail';
 
 
+import Header from './Components/Header/Header';
+import Products from './Components/Products/Products';
+import 'boxicons'; //importar libreria de iconos de fontawesome 
+
 
 
 function App() {
   return (
-      
-      <Router>
-        <Navbar />
-        
-        <CardProduct
-          title="Product 1"
-          
-        /> 
-       
-        <ItemListContainer saludo={'ShopCoder'} /> 
-        <ItemDetail />
-      </Router>
+      <div className='app' >  
 
+      
+    
+      <Router>
+        <Header/>
+        
+       
+       
+        <ItemListContainer  /> 
+        <ItemDetail />
+        
+        
+        
+        <Products/> 
+        
+      </Router>
+      </div>
       
     
   );
