@@ -33,7 +33,8 @@ function App() {
        
         <ItemListContainer  /> 
         <ItemDetail />
-        
+        <ItemDetail />
+        <ItemDetail />
         
         
         <Products/> 

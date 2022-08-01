@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 import Colors from './Colors'
 import Details from './Details';
@@ -44,6 +44,19 @@ class ProductItem extends React.Component {
   render() {
     const {products, index} = this.state;
     console.log(products);
+
+    // const [cart, setCart] = useState([]);
+
+    const handleClick = (item)=>{
+      console.log(item); 
+       //muestra el producto que se agrega al carrito 
+      
+      
+
+    }
+
+
+
     return (
       <div className="app">
         {
@@ -63,8 +76,8 @@ class ProductItem extends React.Component {
                 <p>{item.description}</p>
                 <p>{item.content}</p>
 
-                <Details images={item.src} tab={this.handleTab} myRef={this.myRef} />
-                <button className="cart">Add to cart</button>
+                <Details images={item.src} tab={this.handleTab} myRef={this.myRef}  handleClick={handleClick} />
+                <button className="cart" onClick={()=>handleClick(item)} >Add to cart</button> 
 
               </div>
             </div>
