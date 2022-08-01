@@ -35,10 +35,10 @@ function App() {
         </div>
         
         
-        
+        <Barra/> {/* siempre se muestra, por eso no va en ruta*/}
         <Listener/>
-        <Barra/> 
-        <Routes> 
+         
+        <Routes> {/* componente que requiere ruta */}
         
           <Route path="/" element={<Clase />} /> {/* element es una funcion que retorna un componente */} 
           componentes que requieren ruta, por ejemplo navbar no necesita pues es fijo en la pagina
