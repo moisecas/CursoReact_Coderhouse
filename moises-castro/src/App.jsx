@@ -15,6 +15,8 @@ import Barra from './Components/Barra';
 import Listener from "./Components/Listener";
 import CartContext from "./Components/CartContext";
 import CartProvider from "./Components/CartContext";
+import Loader from './Components/Loader'
+
 
 
 
@@ -37,6 +39,7 @@ function App() {
         
         <Barra/> {/* siempre se muestra, por eso no va en ruta*/}
         <Listener/>
+        <Loader/> 
          
         <Routes> {/* componente que requiere ruta */}
         
