@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Amazon from "./components/amazon";
 import Navbar from "./components/navbar";
 import Cart from "./components/cart";
+import {BrowserRouter, Routes, Route } from "react-router-dom";
 
 const App = () => {
   const [show, setShow] = useState(true);
@@ -26,14 +27,17 @@ const App = () => {
   // }, [cart]);
 
   return (
-    <React.Fragment>
-      <Navbar setShow={setShow} size={cart.length} />
-      {show ? (
-        <Amazon handleClick={handleClick} />
-      ) : (
-        <Cart cart={cart} setCart={setCart} handleChange={handleChange} />
-      )}
-    </React.Fragment>
+    
+      <React.Fragment>
+        <Navbar setShow={setShow} size={cart.length} />
+        {show ? (
+          <Amazon handleClick={handleClick} />
+        ) : (
+          <Cart cart={cart} setCart={setCart} handleChange={handleChange} />
+        )}
+        
+      </React.Fragment>
+   
   );
 };
 
